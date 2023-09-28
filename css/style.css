@@ -1,0 +1,225 @@
+@import "../font/clear-sans.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #5976ba;
+  font-size: 18px;
+  background: #baccd9;
+  overflow: hidden;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 100vh;
+  box-sizing: content-box;
+}
+
+.heading {
+  margin-top: 100px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.game-intro {
+  margin: 5px 0;
+}
+
+.time {
+  margin: 5px 0;
+  text-align: right;
+  font-size: 16px;
+}
+h1.title {
+  font-size: 74px;
+  line-height: 66px;
+  font-weight: bold;
+}
+
+.scores-container {
+  float: right;
+}
+
+.score-container,
+.best-container {
+  float: left;
+  padding: 3px 20px;
+  background: #2e59a7;
+  border-radius: 3px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.score-container {
+  position: relative;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.score-container .title,
+.best-container .title {
+  font-size: 13px;
+  color: #fff;
+}
+
+.score-addition {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #5976ba;
+  z-index: 100;
+  opacity: 0;
+  font-size: 1rem;
+}
+
+.score-addition.action {
+  animation: 2s moveup;
+}
+
+.above-game {
+  font-size: 0.9rem;
+}
+
+.restart-btn {
+  margin: 5px 0 0 5px;
+  float: right;
+  padding: 0 8px;
+  background: #2e59a7;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+h2.subtitle {
+  font-size: 1em;
+}
+
+.game-container {
+  position: relative;
+  margin-top: 15px;
+  width: 450px;
+  height: 450px;
+  background: #2775b6;
+  border-radius: 6px;
+  touch-action: none;
+}
+
+.grid-container,
+.tile-container,
+.pop-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 426px;
+  height: 426px;
+}
+
+.grid-row {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.grid-row,
+.tile {
+  height: 23.5%;
+}
+
+.grid-cell,
+.tile {
+  width: 23.5%;
+  border-radius: 3px;
+}
+
+.grid-cell {
+  margin-right: 2%;
+  background: #93b5cf;
+}
+
+.grid-cell:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.tile {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 53px;
+  font-weight: bold;
+  background: #aed0ee;
+  transition: all 0.15s ease;
+}
+
+.tile.new-tile {
+  animation: 0.5s appear;
+}
+
+.tile.addition {
+  animation: 0.3s add;
+}
+
+.tile[data-val] {
+  color: #f9f6f2;
+}
+
+.tile[data-val="128"],
+.tile[data-val="256"],
+.tile[data-val="512"] {
+  font-size: 45px;
+}
+
+.tile[data-val="1024"],
+.tile[data-val="2048"] {
+  font-size: 33px;
+}
+
+.pop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #aed0ee;
+  z-index: 100;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.pop-container.action {
+  opacity: 1;
+}
+
+.pop-container p {
+  font-size: 60px;
+  font-weight: bold;
+}

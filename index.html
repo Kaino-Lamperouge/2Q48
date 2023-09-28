@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- force webkit on 360 -->
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <!-- force edge on IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- force full screen on some browser -->
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <!-- force screen orientation on some browser -->
+    <!-- portrait - 竖屏 landscape - 横屏 -->
+    <meta name="screen-orientation" content="landscape" />
+    <meta name="x5-orientation" content="landscape" />
+    <meta name="browsermode" content="application" />
+    <meta name="x5-page-mode" content="app" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+    <link rel="stylesheet" href="css/keyframes.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <title>2Q48</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1 class="title">
+          <a href="">2Q48</a>
+        </h1>
+        <div class="scores-container">
+          <div class="score-container">
+            <p class="title">SCORE</p>
+            <p class="score">0</p>
+            <div class="score-addition">+4</div>
+          </div>
+          <div class="best-container">
+            <p class="title">BEST</p>
+            <p class="score">66666</p>
+          </div>
+        </div>
+      </div>
+      <div class="game-intro">
+        <p class="time"></p>
+        <a href="" class="restart-btn">New Game</a>
+        <h2 class="subtitle">Play 017's 2048 Game</h2>
+        <p class="above-game">
+          Join the numbers and get to the <strong>2048</strong> tile!
+        </p>
+      </div>
+      <div class="game-container">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+        </div>
+        <div class="tile-container"></div>
+        <!-- <div class="failure-container pop-container">
+				<p>:(</span></p>
+				<p>FAILURE</p>
+			</div>
+			<div class="winning-container pop-container">
+				<p>:)</p>
+				<p>WINNING</p>
+			</div> -->
+      </div>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/event.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
